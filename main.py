@@ -1,3 +1,5 @@
+# TODO: Add if statements
+
 import os, sys, random
 
 def output(message):
@@ -20,12 +22,11 @@ def rand(max):
     except:
         print("Error! Must use number only!")
         error = True
-    
     if error == False:
         print(max)
 
 os.system('clear')
-print("Welcome to MemeScript!\nVersion 0.2\nType \"help()\" if you need assistance.")
+print("Welcome to MemeScript!\nVersion 0.2.1\nType \"help()\" if you need assistance.")
 
 while True:
     error = True
@@ -117,7 +118,6 @@ while True:
             x = token.replace("askvar(", "", 1)
             x = x.replace("askvar(", "", 1)
             x = x.replace(")", "", 1)
-
             variable = input(x)
             error = False
         except:
@@ -125,11 +125,7 @@ while True:
     # Other commands ####################
     
     if token == 'exit()':
-        try:
-            sys.exit()
-            error = False
-        except:
-            error = True
+        sys.exit()
     if token == 'cls()':
         try:
             os.system('clear')
@@ -145,4 +141,4 @@ while True:
 
     # End ###############################    
     if error == True:
-        print("(Very unhelpful) error! Try typing \"help()\" or retype the line!")
+        print("(Very unhelpful) error!Try typing \"help()\" or retype the line!")
